@@ -1,8 +1,8 @@
 # Site settings
-title: Lorem Ipsum - Web Developer
+title: 牛逼
 description: "A blog about lorem ipsum ..."
 baseurl: "" # for test: remove string '/space-jekyll-templa' to ''
-url: "http://victorvoid.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
+url: "https://wushq5.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 # User settings
 username: lorem ipsum
 user_title: Lorem Ipsum - FrontEnd
@@ -11,6 +11,7 @@ twitter_username: loremipsum
 github_username:  loremipsum
 gplus_username:  loremipsum
 disqus_username: loremipsum
+repository: "wushq5/wushq5.github.io"
 
 # Build settings
 markdown: kramdown
