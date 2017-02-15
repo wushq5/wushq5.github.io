@@ -1,5 +1,5 @@
-title:            Blog Title
-description:      Describe your website here.
+title:            无可奉告
+description:      你们非常熟悉西方的一套理论.
 
 # put your disqus here
 disqus_shortname:
@@ -20,10 +20,10 @@ url: https://wushq5.github.io/
 menu:
   - title: 'Home'
     url: '/'
-  - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
-  - title: 'Install'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme#installation'
+  - title: 'Projects'
+    url: 'https://www.webank.com'
+  - title: 'Blog'
+    url: 'https://www.webank.com'
   - title: 'Tags'
     url: '/tags'
   - title: 'Categories'
