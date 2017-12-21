@@ -119,6 +119,7 @@ Vue 2.1.0 新增 props: `include` 和 `exclude`，官方解释如下
 
 * `include` - 字符串或正则表达式。只有匹配的组件会被缓存。
 * `exclude` - 字符串或正则表达式。任何匹配的组件都不会被缓存。
+
 ```
 <!-- 逗号分隔字符串 -->
 <keep-alive include="a,b">
@@ -135,6 +136,7 @@ Vue 2.1.0 新增 props: `include` 和 `exclude`，官方解释如下
   <router-view/>
 </keep-alive>
 ```
+
 显然，数组类型也是支持的。匹配首先检查组件自身的 name 选项，`include` 和 `exclude` 只作用于具名组件，匿名组件不能被匹配。
 
 ## 源码解读
@@ -231,6 +233,7 @@ render () {
 
 ### 最大缓存组件数量
 `keep-alive` 组件定义了 `props` 属性
+
 ```
 props: {
   include: patternTypes,
@@ -238,6 +241,7 @@ props: {
   max: [String, Number]
 }
 ```
+
 官方文档没有提供 `max` 属性的使用说明。上面分析 render 函数可知如果缓存的组件数量达到设置的上限，就移除最早缓存的组件。
 在上面 CompA 与 CompB 的基础上，增加组件 CompC，并设置 `max` 属性为 2 
 
@@ -373,3 +377,7 @@ destroy (vnode: MountedComponentVNode) {
 
 若没有设置 `keepAlive` 属性，则 CompB 组件将会调用 `$destroy` 函数进行销毁。而设置了 `keepAlive` 属性，则只会调用组件生命周期的 `deactivated` 钩子函数，组件实例得以保存在内存中。
 **综上所述，虚拟节点的 `keepAlive` 属性是关键，通过该属性在调用 `init` 钩子时避免实例被多次创建，同时在切换时调用`destroy` 钩子避免被销毁。**
+
+
+## References
+1. 戴嘉华 [深度剖析：如何实现一个 Virtual DOM 算法](https://segmentfault.com/a/1190000004029168)
