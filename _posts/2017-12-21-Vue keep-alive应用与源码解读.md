@@ -375,7 +375,7 @@ destroy (vnode: MountedComponentVNode) {
 }
 ```
 
-若没有设置 `keepAlive` 属性，则 CompB 组件将会调用 `$destroy` 函数进行销毁。而设置了 `keepAlive` 属性，则只会调用组件生命周期的 `deactivated` 钩子函数，组件实例得以保存在内存中。
+若没有设置 `keepAlive` 属性，则 CompA 组件将会调用 `$destroy` 函数进行销毁。而设置了 `keepAlive` 属性，则只会调用组件生命周期的 `deactivated` 钩子函数，组件实例得以保存在内存中。
 **综上所述，虚拟节点的 `keepAlive` 属性是关键，通过该属性在调用 `init` 钩子时避免实例被多次创建，同时在切换时调用`destroy` 钩子避免被销毁。**
 
 
