@@ -1,11 +1,14 @@
 ---
-title: Vue keep-alive应用与源码解读
+title: Vue keep-alive应用与源码分析
 date: 2017-12-21 23:00:00
 categories:
 - Font-end
 tags:
 - Vue
 ---
+
+## 前言
+在做Vue单页面应用时，经常会遇到页面之间来回切换的情况，每个页面可能会有不少网络请求，但是部分页面的数据不需要每次进入都请求。若每次进入页面都需要进行网络请求，无疑会增加不必要的耗时，并且页面的重新渲染也会造成一定的性能浪费。而Vue 2.0+提供了一个内置组件`keep-alive`用来缓存组件，有效地减少性能消耗，下面谈谈 `keep-alive` 的用法与其源码分析。
 
 ## 应用
 ### 基本用法
@@ -139,7 +142,7 @@ Vue 2.1.0 新增 props: `include` 和 `exclude`，官方解释如下
 
 显然，数组类型也是支持的。匹配首先检查组件自身的 name 选项，`include` 和 `exclude` 只作用于具名组件，匿名组件不能被匹配。
 
-## 源码解读
+## 源码分析
 `keep-alive` 是Vue的内置组件，源码位于 [src/core/components/keep-alive.js](https://github.com/vuejs/vue/blob/dev/src/core/components/keep-alive.js)。
 
 ### `created` 与 `destroyed` 钩子
