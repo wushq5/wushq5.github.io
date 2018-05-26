@@ -1,6 +1,6 @@
 ---
 title: React Native WebView导航栏后退功能的实现
-date: 2018-05-26 12:00:00
+<!-- date: 2018-5-26 12:00:00 -->
 categories:
 - Font-end
 tags:
@@ -8,7 +8,6 @@ tags:
 ---
 
 ## 背景
-
 在 React Native 项目开发中，有场景需要在页面中嵌入 `WebView` 组件展示完整的网页，并使用自定义导航栏，该导航栏的**后退**按钮需具备以下功能：
 
 1. WebView 内部没有发生跳转，即没有发生 url 或 hash 变化，点击后退，执行页面返回（关闭 WebView）
