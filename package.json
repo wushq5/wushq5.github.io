@@ -1,0 +1,19 @@
+{
+  "name": "wushq5.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "bundle exec jekyll server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wushq5/wushq5.github.io.git"
+  },
+  "author": "rcrab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wushq5/wushq5.github.io/issues"
+  },
+  "homepage": "https://github.com/wushq5/wushq5.github.io#readme"
+}
